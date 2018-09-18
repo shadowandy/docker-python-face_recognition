@@ -1,3 +1,5 @@
+# Docker image based on python-facial_recognition
+
 FROM python:3.6-slim-stretch
 
 RUN apt-get -y update

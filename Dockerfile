@@ -2,6 +2,8 @@
 
 FROM python:3.6-slim-stretch
 
+WORKDIR /root
+
 RUN apt-get -y update
 RUN apt-get install -y --fix-missing \
     build-essential \
@@ -40,5 +42,10 @@ RUN cd /root/face_recognition && \
     python3 setup.py install
 
 RUN pip3 install Flask
+
+MKDIR /root/files
+VOLUME /root/files
+
+EXPOSE 5001
 
 CMD ["/bin/bash"]

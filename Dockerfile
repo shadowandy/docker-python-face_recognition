@@ -43,7 +43,7 @@ RUN cd /root/face_recognition && \
 
 RUN pip3 install Flask
 
-MKDIR /root/files
+RUN run -p /root/files
 VOLUME /root/files
 
 EXPOSE 5001
